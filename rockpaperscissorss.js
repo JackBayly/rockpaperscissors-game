@@ -27,27 +27,28 @@ let result="";
 
 if (compScore==5) {
   
-  result+=(`You lose, try again! Player Score= ${playerScore} and Computer Score =${compScore}`);
+  result+=(`You lose, try again!<br>Player Score= ${playerScore}<br>Computer Score =${compScore}`);
     f.innerHTML=result;
 
 
   } else if (playerScore==5) {
    
-    result+=(`Congratulations! You win the game! Player Score= ${playerScore} and Computer Score =${compScore}`);
+    result+=(`Congratulations! You win the game! 
+    <br>Player Score= ${playerScore}<br>Computer Score =${compScore}`);
     f.innerHTML=result;
 
 
   } else {
 if ((playerSelection=="Rock" && computerSelection=="Scissors") || (playerSelection=="Scissors" && computerSelection=="Paper") || (playerSelection=="Paper" && computerSelection=="Rock")) {
 playerScore++;
-result =(`${playerSelection} beats ${computerSelection}. You win! Player Score= ${playerScore} and Computer Score =${compScore}`);
+result =(`${playerSelection} beats ${computerSelection}. You win!<br>Player Score= ${playerScore}<br>Computer Score =${compScore}`);
   
 } else if ((playerSelection=="Rock" && computerSelection=="Paper") || (playerSelection=="Scissors" && computerSelection=="Rock") || (playerSelection=="Paper" && computerSelection=="Scissors")) {
  compScore +=1;
- result= (`${computerSelection} beats ${playerSelection}. You lose! Player Score= ${playerScore} and Computer Score =${compScore}`);
+ result= (`${computerSelection} beats ${playerSelection}. You lose!<br> Player Score= ${playerScore}<br>Computer Score =${compScore}`);
  
 } else if (playerSelection==computerSelection) {
-result= `It's a tie! Player Score= ${playerScore} and Computer Score =${compScore}`;
+result= `You and the computer played ${playerSelection}. It's a tie!<br>Player Score= ${playerScore}<br>Computer Score =${compScore}`;
 
 }}
 
